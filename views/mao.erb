@@ -14,7 +14,7 @@
 			<!-- Latest compiled JavaScript -->
 			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-			<link rel="stylesheet" type="text/css" href="mao.css">
+			<link rel="stylesheet" type="text/css" href="/mao.css">
 
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
@@ -29,7 +29,7 @@
 
 <!-- Main Image -->
   	<div id="image-pos" class="row">
-  		<div class="col-md-3 "> <img src="cop_watch.jpg"
+  		<div class="col-md-3 "> <img src="/cop_watch.jpg"
   		  class="img-rounded" width="245" height="190">
 
   		</div>
@@ -38,10 +38,10 @@
 
 
 	<!-- Form Start -->
-		  <form style="width: 300px;" role="form">
+		  <form style="width: 300px;" id="form1" role="form" method="POST" action="/secondary">
 	       <div class="form-group">
 		      <label for="e">Username:</label>
-		      <input type="email" class="form-control" id="username" placeholder="Username"> 
+		      <input type="text" class="form-control" id="username" name="uname" placeholder="Username"> 
 
 		      <br>
 
@@ -89,27 +89,27 @@
         <div class="modal-body">
              <!-- insert form here -->
 
-    <fieldset>
+    <form action="/secondary" method="POST">
     <legend>Enter your Information:</legend>
     First name:<br>
-    <input type="text" name="firstname" value=""placeholder="Firstname">
+    <input type="text" name="fname" value=""placeholder="Firstname">
     <br>
     Last name:<br>
-    <input type="text" name="lastname" value="" placeholder="Lastname"><br>
+    <input type="text" name="lname" value="" placeholder="Lastname"><br>
      Email:<br>
     <input type="text" name="email" value="">
     <br><br>
 
       <div>
         	<label>Create Password</label>
-        	<input type="email" id="email" method="post" placeholder="* min 4-digits">
+        	<input type="password" id="email" method="post" placeholder="* min 4-digits">
         </div>
 
 
     <br><br>
     <input type="submit" value="Submit">
-  </fieldset>
-</form>
+  </form>
+
          
 
 

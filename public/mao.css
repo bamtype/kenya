@@ -62,7 +62,7 @@ a:hover, #header2, {
 	clear:both;
 }
 
-form{
+form#form1{
 position: relative;
 top:300px;
 left:400px;

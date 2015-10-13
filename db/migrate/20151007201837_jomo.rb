@@ -5,7 +5,7 @@ class Jomo < ActiveRecord::Migration
 		t.string :lname
 		t.string :city
 		t.string :state
-		t.string :alias
+		t.string :uname
 		t.string :post
 	 end
   

@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20151007201837) do
     t.string "lname"
     t.string "city"
     t.string "state"
-    t.string "alias"
+    t.string "uname"
     t.string "post"
   end
 
