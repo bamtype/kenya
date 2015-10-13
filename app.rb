@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-# require 'models'
-# require 'sinatra-flash'
+require 'models'
+require 'sinatra-flash'
 
 set :database, "sqlite3:kenya.sqlite3"
 
