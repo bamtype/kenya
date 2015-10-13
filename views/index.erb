@@ -1,0 +1,16 @@
+<h1>Login Info</h1>
+<!--
+  here we check to see if the user is logged in
+  we use the current_user method defined in app.erb
+-->
+<% if current_user %>
+  <!-- if the user is logged in do this -->
+  Here is your user information:
+  <ul>
+    <li><strong>Username:</strong> <%= current_user.username %></li>
+    <li><strong>Password:</strong> <%= current_user.password %></li>
+  <ul>
+<% else %>
+  <!-- if the user is not logged in do this -->
+  You must login or signup before accessing this site
+<% end %>

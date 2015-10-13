@@ -1,0 +1,124 @@
+body {
+  font-family: verdana, sans-serif;
+}
+
+nav {
+  margin: 10 0 20px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+}
+
+strong {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input, label, textarea {
+  display: block;
+  margin: 5px 0;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.flash {
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+}
+
+.flash-info {
+  background: green;
+}
+
+.flash-alert {
+  background: red;
+}
+
+
+
+
+
+
+/*#header{
+	background-color: grey;
+	height: 40px;
+	font-family: 'Wallpoet', cursive;
+
+}
+
+#header2{
+	background-color:#022B60;
+	height: 40px;
+	color:white;
+	padding-top:5px;
+
+} 
+
+h1{margin-top:-3px;
+color:black;}
+
+/*may turn this into a huge background*/
+
+/*.img-rounded {
+    border-radius: 110px;
+    position: relative;
+    left: -30px;
+}
+*/
+/*
+
+body{
+background-color: rgba(48, 71, 185, 1);
+}
+
+a:hover, #header2, {
+	color: red;
+}
+
+#image-pos{
+
+	width: 250px;
+	height: 200px;
+/*	border: 1px solid black;*/
+    /*position: absolute;
+    top: 95px;
+    left: 498px;*/
+/*
+}
+
+
+*/
+/*#hey {
+
+	width: 50px;
+	height: 20px;
+	border: 1px solid green;
+	background-color:grey;
+}*/
+
+
+/*#footer{
+	background-color: grey;
+	height: 40px;
+	clear:both;
+}*/
+
+/*form{
+position: relative;
+top:300px;
+left:400px;
+}*/

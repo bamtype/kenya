@@ -1,24 +1,63 @@
 <html>
 <head>
- <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Cop Watc</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+  <!-- we display the flash info only if it is set -->
+  <% if flash[:info] %>
+    <div class="flash flash-info">
+      <%= flash[:info] %>
+    </div>
+  <% end %>
+  <!-- we display flash alert only if it is set -->
+  <% if flash[:alert] %>
+   <div class="flash flash-alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <nav>
+  <% if current_user %>
+    <!-- 
+      this links us to the get routes defined
+      in the app.rb file, notice we only do this when the
+      user is logged in
+    -->
+   <!--  <a href="/">Login Info</a> -->
+    <a href="/posts/new">Create a New Post</a>
+    
+    <!-- this goes to the page with all of the logged in user's posts  -->
+    <a href="/posts">My Posts</a>
 
- 
+    <!-- this goes to the page with all of the user posts of everyone in the system  -->
+    <a href="/posts/all">All Posts</a>
 
-  <% if flash[:notice] %>
-      <h1 class="flash-notice">
-          <%= flash[:notice] %>
-      </h1>
-      <% end %>
+    <!-- this goes to the page with all of the current user's follower's -->
+    <a href="/posts/followers">My Followers' Posts</a>
 
-      <% if flash[:alert] %>
-   <h1 class="flash-alert">
-     <%= flash[:alert] %>
-   </h1>
- <% end %>    
- 
- <%= yield %>
+    <!-- this goes to the page with all of the users of everyone in the system  -->
+    <a href="/users/all">All Users</a>
+
+    <!-- this goes to the page with all of the logged in users followers  -->
+    <a href="/followers">My Followers</a>
+
+    <!-- this goes to the page with all of the users who are following the logged in user  -->
+    <a href="/followees">Users I Follow</a>
+
+   <!--  <a href="/logout">Logout</a> -->
+  <% else %>
+    <!-- 
+      this links us to the get "/signup" route defined
+      in the app.rb file, notice we only do this when the
+      user is logged out
+    -->
+   <!--  <a href="/signup">Sign Up</a>
+    Or
+    <a href="/login">Login</a> -->
+  <% end %>
+  </nav>
+  <!-- we are displaying our subtemplate output within the yield -->
+  <%= yield %>
 </body>
 </html>
 
