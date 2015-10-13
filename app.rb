@@ -23,22 +23,22 @@ get "/post" do
 
 
 
-# get "/sign-in" do
-#   erb :sign_in_form
-# end
+get "/sign-in" do
+  erb :sign_in_form
+end
 
-# post "/sign-in" do
-#   @user = User.where(email: params[:email]).first
+post "/sign-in" do
+  @user = User.where(username: params[:username]).first
 
-#   if @user && @user.password == params[:password]
-#     session[:user_id] = @user.id
-#     flash[:notice] = "The Matrix has you..."
-#   else
-#     flash[:alert] = "Are you sure that's air you are breathing?"
-#   end
+  if @user && @user.password == params[:password]
+    session[:user_id] = @user.id
+    flash[:notice] = "The Matrix has you..."
+  else
+    flash[:alert] = "Are you sure that's air you are breathing?"
+  end
 
-#   redirect "/"
-# end
+  redirect "/posts"
+end
 
 # get "/sign-out" do
 #   if session[:user_id]
